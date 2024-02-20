@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import InputText from './components/InputText'
 import InputQtd from './components/InputQtd'
 import Item from './components/Item'
@@ -24,10 +24,21 @@ function App() {
   }
 
   const addList = () => {
-    if(nome === "" || quantidade == "") return;
-    let newList = [[...list], <Item nomeProduto={nome} quantidade={quantidade}/>] ;
-    setList(newList); 
+    if (nome === "" || quantidade == "") return;
+    let newList = [[...list], <Item nomeProduto={nome} quantidade={quantidade} />];
+    setList(newList);
   }
+  const showList = useMemo(() => {
+    return (
+      list.map((task, index) => {
+        return (
+          <div key={index}>
+            {task}
+          </div>
+        )
+      })
+    )
+  }, [list]);
 
   return (
     <div className='flex justify-center flex-col mt-10 gap-5'>
@@ -36,7 +47,6 @@ function App() {
         <InputQtd valorQuantidade={setQuantidade} />
         <button className='border bg-verde w-36 h-8 rounded' onClick={addList}>Adicionar</button>
       </div>
-      <Item nomeProduto="Bla" quantidade="2" />
     </div>
   )
 }
