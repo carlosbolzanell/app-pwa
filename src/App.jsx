@@ -24,9 +24,9 @@ function App() {
   }
 
   const addList = () => {
-    if(nome === "") return;
-
-    
+    if(nome === "" || quantidade == "") return;
+    let newList = [[...list], <Item nomeProduto={nome} quantidade={quantidade}/>] ;
+    setList(newList); 
   }
 
   return (
