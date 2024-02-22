@@ -16,7 +16,7 @@ export default function InputQtd({valorQuantidade}) {
             <p className="font-montserrat text-xl text-cinza-escuro">Quantidade</p>
             <div className="flex flex-row gap-5">
                 <button onClick={() => changeQtd(false)} className='border bg-verde w-7 h-6 rounded'>-</button>
-                <p className="border border-verde w-7 h-8 rounded">{number}</p>
+                <p className="border border-verde w-7 h-8 rounded" id="inputQtd" value={number}>{number}</p>
                 <button onClick={() => changeQtd(true)} className="border bg-verde w-7 h-6 rounded">+</button>
             </div>
         </div>
