@@ -1,19 +1,4 @@
-import { useEffect, useState } from "react";
-
-export default function InputText({ valorPassado, onClean }) {
-  const [nome, setNome] = useState("");
-
-  useEffect(() => {
-    valorPassado(nome);
-  }, [nome]);
-
-  function onClean() {
-    setNome("");
-  }
-
-  const inputValue = (event) => {
-    setNome(event.target.value);
-  };
+export default function InputText({valorPassado, value}) {
 
   return (
     <div>
@@ -21,8 +6,8 @@ export default function InputText({ valorPassado, onClean }) {
       <input
         id="inputText"
         type="text"
-        value={nome}
-        onChange={inputValue}
+        value={value}
+        onChange={(event)=>{valorPassado(event.target.value)}}
         placeholder="Digite o Nome do Produto"
         className="border border-black rounded py-0.5 w-96 pl-1 focus:outline-0 bg-fundo border-verde border-1 text-cinza-claro"
       />
