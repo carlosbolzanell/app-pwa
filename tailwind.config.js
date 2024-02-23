@@ -13,7 +13,8 @@ export default {
         "fundo": "#FEFAE0",
         'verde': '#ADC178',
         "cinza-claro": "#979191",
-        "cinza-escuro": "#614F4F"
+        "cinza-escuro": "#614F4F",
+        "linha": "#CCC1C1"
       }
     },
   },

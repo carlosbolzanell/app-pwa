@@ -2,7 +2,7 @@ export default function InputText({valorPassado, value}) {
 
   return (
     <div>
-      <p className="font-montserrat text-xl text-cinza-escuro">Nome do Produto</p>
+      <p className="font-montserrat text-cinza-escuro text-lg">Nome do Produto</p>
       <input
         id="inputText"
         type="text"
