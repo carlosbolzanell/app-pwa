@@ -9,7 +9,7 @@ export default function Item({ nomeProduto, quantidade, excluir, indexItem}) {
         excluir(newList);
     }
     return (
-        <div className="border border-verde rounded flex flex-row justify-between items-center w-2/4">
+        <div className="border border-verde rounded flex flex-row justify-between items-center w-2/4 p-2 my-4">
             <input type="checkbox"/>
             <p>{nomeProduto}</p>
             <p>{quantidade}</p>

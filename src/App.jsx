@@ -40,13 +40,18 @@ function App() {
   }, [list]);
 
   return (
-    <div className='flex justify-center flex-col mt-10 gap-5'>
+    <div className='flex justify-center flex-col mt-10 gap-5 px-11'>
+      <h1 className="font-montserrat text-cinza-escuro text-xl font-semibold">👋Bem vindo!</h1>
+      <div className='border-t border-linha w-[100%] m-auto'></div>
+      <h1 className="font-montserrat text-cinza-escuro text-xl font-semibold">Adicione um produto a lista</h1>
       <div className='flex flex-row items-end gap-3'>
         <InputText valorPassado={setNome} value={nome}/>
         <InputQtd valorQuantidade={setQuantidade} value={quantidade}/>
-        <button className='border bg-verde w-36 h-8 rounded' onClick={addList}>Adicionar</button>
+        <button className='border bg-verde w-28 h-8 rounded' onClick={addList}>Adicionar</button>
       </div>
       <div>
+        <div className='border-t border-linha w-[100%] m-auto mt-3'></div>
+        <h1 className="font-montserrat text-cinza-escuro text-xl font-semibold mt-5">Sua lista de compras</h1>
         {showList}
       </div>
     </div>
