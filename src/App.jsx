@@ -28,15 +28,17 @@ function App() {
     let newList = [...list];
     let newItem = {
       "nome": nome,
-      "quantidade": quantidade
+      "quantidade": quantidade,
+      "check": false
     }
     newList.push(newItem);
     setList(newList);
     setNome("");
     setQuantidade(0);
   }
+
   const showList = useMemo(() => {
-    return (list.map((item, index) => (<Item nomeProduto={item.nome} quantidade={item.quantidade} excluir={setList} indexItem={index} />)))
+    return (list.map((item, index) => (<Item nomeProduto={item.nome} quantidade={item.quantidade} excluir={setList} indexItem={index} checked={item.check}/>)))
   }, [list]);
 
   return (
@@ -57,10 +59,10 @@ function App() {
         <div className='border-t border-linha w-[100%] m-auto mt-3'></div>
         <h1 className="font-montserrat text-cinza-escuro text-xl font-semibold mt-5">Sua lista de compras</h1>
         <div className="border border-verde rounded flex flex-row justify-between items-center w-[100%] p-2 mt-5">
-          <p className='text-sm'>Status</p>
-          <p className='text-sm'>Produto</p>
-          <p className='text-sm'>Quantidade</p>
-          <p className='text-sm'>Remover</p>
+          <div className='w-[20%] flex justify-start items-center'> <p className='text- font-montserrat'>Status</p> </div>
+          <div className='w-[30%] flex justify-center items-center'> <p className='text- font-montserrat'>Produto</p> </div>
+          <div className='w-[30%] flex justify-center items-center'> <p className='text- font-montserrat'>Quantidade</p> </div>
+          <div className='w-[20%] flex justify-end items-center'> <p className='text- font-montserrat'>Remover</p> </div>
         </div>
         {showList}
       </div>
