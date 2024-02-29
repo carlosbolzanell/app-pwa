@@ -59,10 +59,10 @@ function App() {
         <div className='border-t border-linha w-[100%] m-auto mt-3'></div>
         <h1 className="font-montserrat text-cinza-escuro text-xl font-semibold mt-5">Sua lista de compras</h1>
         <div className="border border-verde rounded flex flex-row justify-between items-center w-[100%] p-2 mt-5">
-          <div className='w-[20%] flex justify-start items-center'> <p className='text- font-montserrat'>Status</p> </div>
-          <div className='w-[30%] flex justify-center items-center'> <p className='text- font-montserrat'>Produto</p> </div>
-          <div className='w-[30%] flex justify-center items-center'> <p className='text- font-montserrat'>Quantidade</p> </div>
-          <div className='w-[20%] flex justify-end items-center'> <p className='text- font-montserrat'>Remover</p> </div>
+          <div className='w-[20%] flex justify-start items-center'> <p className='text-sm font-montserrat'>Status</p> </div>
+          <div className='w-[30%] flex justify-center items-center'> <p className='text-sm font-montserrat'>Produto</p> </div>
+          <div className='w-[30%] flex justify-center items-center'> <p className='text-sm font-montserrat'>Quantidade</p> </div>
+          <div className='w-[20%] flex justify-end items-center'> <p className='text-sm font-montserrat'>Remover</p> </div>
         </div>
         {showList}
       </div>
